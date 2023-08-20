@@ -1,0 +1,34 @@
+.main {
+  padding: 2rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cars_name {
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  line-height: 1.3rem;
+  letter-spacing: 2px;
+  color: crimson;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.active {
+  background: white;
+  color: crimson;
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
+.hidden_detail {
+  display: none;
+}
+
+.active_detail {
+  display: block;
+}
