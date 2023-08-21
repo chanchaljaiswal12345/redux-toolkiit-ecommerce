@@ -3,9 +3,12 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { AppThunk, RootState } from './store';
 import axios from 'axios';
 
-interface Product {
+export interface Product {
   id: number;
   title: string;
+  description: string;
+   category: string;
+   price: number;
   // Add other properties as needed
 }
 

@@ -7,8 +7,8 @@ import Image from 'next/image';
 function Index() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const selectedProduct = useSelector(selectSelectedProduct);
-
+  const selectedProduct:any = useSelector(selectSelectedProduct);
+console.log("ssssssssss",selectedProduct)
   useEffect(() => {
     getData();
   }, []);
@@ -16,7 +16,7 @@ function Index() {
   const getData = async () => {
     if (router.query.slug) {
       const id = Number(router.query.slug); // Ensure the id is a number
-      dispatch(fetchData(id));
+      dispatch<any>(fetchData(id));
     }
   };
 
