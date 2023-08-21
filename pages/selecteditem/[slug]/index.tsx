@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchData, selectSelectedProduct } from '../../../store/productsSlice';
-import { useRouter } from 'next/router';
-import Image from 'next/image';
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  fetchData,
+  selectSelectedProduct,
+} from "../../../store/productsSlice";
+import { useRouter } from "next/router";
+import Image from "next/image";
 
 function Index() {
   const router = useRouter();
   const dispatch = useDispatch();
-  const selectedProduct:any = useSelector(selectSelectedProduct);
-console.log("ssssssssss",selectedProduct)
+  const selectedProduct = useSelector(selectSelectedProduct);
+
   useEffect(() => {
     getData();
   }, []);
@@ -27,11 +30,12 @@ console.log("ssssssssss",selectedProduct)
           <h2 className="mt-2 mb-2 font-bold text-2xl font-Headingg text-center">
             Welcome to stackInfinte
           </h2>
+
           <h1>{selectedProduct.id}</h1>
           <p>{selectedProduct.description}</p>
           <div className=" ">
             <a href="#">
-              {' '}
+              {" "}
               <Image
                 src={selectedProduct.image}
                 height={200}
